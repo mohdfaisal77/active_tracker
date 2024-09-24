@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:test_project_login/screens/login_screen.dart';
 
+import '../utils/app_strings.dart';
+
 
 class MainScreen extends StatefulWidget {
   final String userName;
@@ -92,7 +94,7 @@ class _MainScreenState extends State<MainScreen> {
       onTap: _onUserInteraction,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Main Screen'),
+          title: Text(AppStrings.main_screen),
           actions: [
             IconButton(
               icon: Icon(Icons.logout),
