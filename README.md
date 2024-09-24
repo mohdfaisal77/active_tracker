@@ -1,16 +1,29 @@
-# test_project_login
+#Active Tracker
+An action Tracker app is a Flutter application that demonstrates user authentication and inactivity tracking. Users can log in with given dummy credentials, view a welcomed message and receive inactivity warnings.
 
-A new Flutter project.
+Feature- 
 
-## Getting Started
+1. Login/LogOut: Users log in using a username and password which is dummy credentials for testing.
+2.Main Screen: Displays a welcome message and a manual logout option.
+3. Inactivity Tracker: If the user is inactive for one minute, a warning appears with a 30 second countdwon.
+4. Automatic Logout: If there's no interaction during the countdown, the user is automatically logged out.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+How to Run- 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-> Clone the repository: 
+  git clone https://github.com/mohdfaisal77/active_tracker
+  
+-> Navigate to the project directory:
+   cd active_tracker
+   
+-> Run the App(as no dependencies were added):
+   flutter run
+
+
+
+Code Structure- 
+->main.dart: Contains the app logic,theme.
+->LoginScreen: Contains two textfield and a button for login.
+->MainScreen: Conatins a Text and a appBar with logOut Icon and functionality.
