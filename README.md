@@ -13,7 +13,7 @@ Feature-
 How to Run- 
 
 -> Clone the repository: 
-  git clone 
+  git clone https://github.com/mohdfaisal77/active_tracker
   
 -> Navigate to the project directory:
    cd active_tracker
