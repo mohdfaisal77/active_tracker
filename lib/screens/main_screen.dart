@@ -73,11 +73,11 @@ class _MainScreenState extends State<MainScreen> {
       warningTimer?.cancel(); // Cancel the countdown timer
 
       // Restart the warning after 30 seconds
-      Future.delayed(Duration(seconds: 30), () {
-        if (mounted) {
-          _showWarning(); // Show warning again after 30 seconds
-        }
-      });
+      // Future.delayed(Duration(seconds: 30), () {
+      //   if (mounted) {
+      //     _showWarning(); // Show warning again after 30 seconds
+      //   }
+      // });
     }
   }
 
@@ -90,11 +90,13 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height * 1;
     return GestureDetector(
       onTap: _onUserInteraction,
       child: Scaffold(
         appBar: AppBar(
           title: Text(AppStrings.main_screen),
+          backgroundColor: Colors.teal,
           actions: [
             IconButton(
               icon: Icon(Icons.logout),
@@ -106,13 +108,22 @@ class _MainScreenState extends State<MainScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Welcome ${widget.userName}'),
+              Text('Welcome ${widget.userName}',
+                  style: TextStyle(
+                 color: Colors.black,
+                 fontWeight: FontWeight.bold,
+                 fontSize: 32
+               ),
+              ),
+              SizedBox(height: height * 0.05,),
               if (showWarning)
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: Text(
                     'You have been inactive. You will be logged out in $countdownSeconds seconds unless you interact.',
-                    textAlign: TextAlign.center,
+                    textAlign: TextAlign.center,style:TextStyle(color: Colors.black,fontSize: 12,
+                     fontWeight: FontWeight.w300,
+                     fontStyle: FontStyle.italic),
                   ),
                 ),
             ],
